@@ -5,16 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nano</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./index.css">
 </head>
 
-<body class="nano gap">
-    <div class="s6 pad">div s6</div>
-    <div class="s6 pad">div s6</div>
-    <div class="s6 m4 l3 pad">div</div>
-    <div class="s6 m4 l3 pad">div</div>
-    <div class="s6 m4 l3 pad">div</div>
-    <div class="s6 m4 l3 pad">div</div>
+<body>
+    <h1>Nano css layout</h1>
+    <hr>
+    <section class="pad">
+        <h2>Container et colonnes</h2>
+        <h3>.nano container</h3>
+        <p>Tous éléments ayant la class <i>.nano</i> devient un container flex, wrap, justify-content:space-between</p>
+        <h3>Colonnes</h3>
+        <p>Tout élément enfant direct d'un container <i>nano</i>
+            peut s'étaler sur <em>x 12 <sup>èmes</sup></em> de la largeur de son parent en fonction de sa classe.</p>
+        <ul>
+            <li>S1 => 1/12 de la largeur du parent</li>
+            <li>S2 => 2/12 de la largeur du parent</li>
+            <li>S3 => 3/12 de la largeur du parent</li>
+            <li>...</li>
+            <li>S12 => <em>Inutile</em>, par défaut les enfants de <i>.nano</i> prennent toute la largeur du container
+            </li>
+        </ul>
+        <h3>Breakpoints</h3>
+        <p>Un framework responsive minimaliste avec 3 largeurs d'écran gérées</p>
+        <ul class="nano gap padv txt-center">
+            <li class="s12 m4 l4"><i class="fa-solid fa-mobile-screen"></i><br>Les règles <i>.sX</i> s'appliquent par
+                défaut</li>
+            <li class="s12 m4 l4"><i class="fa-solid fa-tablet-screen-button"></i><br>Les règles <i>.mX</i> s'appliquent
+                à partir de 800px</li>
+            <li class="s12 m4 l4"><i class="fa-solid fa-desktop"></i><br>Les règles <i>.lX</i> s'appliquent à partir de
+                1200px</li>
+        </ul>
+        <p>Approche <em>mobile first</em> : si aucune classe n'est donnée pour les tailles d'écran <i>medium</i> et
+            <i>large</i>, les dimensions <i>small</i> s'appliquent pour toutes les tailles.
+        </p>
+    </section>
+    <section class="nano gap greychild">
+        <div class="pad">élément sans colonnage spécifié : <i>flex-basis : 100%</i></div>
+        <div class="s6 pad">élément .s6</div>
+        <div class="s6 pad">élément .s6</div>
+        <div class="s6 m4 l3 pad">élément .s6 m4 l3</div>
+        <div class="s6 m4 l3 pad">élément .s6 m4 l3</div>
+        <div class="s6 m4 l3 pad">élément .s6 m4 l3</div>
+        <div class="s6 m4 l3 pad">élément .s6 m4 l3</div>
+    </section>
+    <section class="pad">
+        <h2>Surcharges</h2>
+        <h3>Padding</h3>
+        <h3>Gap</h3>
+        <h3>Nogrow</h3>
+    </section>
+
 </body>
 
 </html>
